@@ -1,24 +1,25 @@
-import { Shop } from "iconsax-reactjs";
-import Menu from "../ui/Menu";
+import { Apple, ShoppingCart } from "iconsax-reactjs";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  const nav = ["Bags", "Shoes", "Accessory"];
   return (
-    <header className="max-w-4xl mx-8 sm:mx-auto py-8">
-      <nav className="flex justify-between items-center">
-        <span>Krugs</span>
+    <header>
+      <nav>
+        <Link to="/">
+          <Apple size={24} color="#000" />
+        </Link>
+
         <div>
-          <ul className="flex gap-x-8">
-            {nav.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
+          <ul>
+            <li>Home</li>
+            <li>Feature</li>
+            <li>Specs</li>
           </ul>
-          <button className="hidden">
-            <Shop size={24} color="#000" />
-          </button>
         </div>
 
-        <Menu />
+        <button>
+          <ShoppingCart size={24} color="#000" />
+        </button>
       </nav>
     </header>
   );
