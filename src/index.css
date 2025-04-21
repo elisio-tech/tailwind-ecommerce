@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap")
-layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import "tailwindcss";
 
 body {
-  font-family: "Outfit";
-  background: #000;
-  color: white;
+  font-family: "Anton";
 }
