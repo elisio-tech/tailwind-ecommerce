@@ -1,16 +1,16 @@
-import { Apple, ShoppingCart } from "iconsax-reactjs";
+import { Apple, BagHappy } from "iconsax-reactjs";
 import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header>
-      <nav>
+    <header className="fixed top-0 left-0 right-0 ">
+      <nav className="max-w-4xl mx-4 sm:mx-auto flex justify-between items-center">
         <Link to="/">
-          <Apple size={24} color="#000" />
+          <Apple size={28} color="#fff" variant="Bold"/>
         </Link>
 
-        <div>
-          <ul>
+        <div className="py-8">
+          <ul className="flex justify-center items-center gap-8">
             <li>Home</li>
             <li>Feature</li>
             <li>Specs</li>
@@ -18,7 +18,7 @@ export default function Header() {
         </div>
 
         <button>
-          <ShoppingCart size={24} color="#000" />
+          <BagHappy size={24} color="#fff" />
         </button>
       </nav>
     </header>

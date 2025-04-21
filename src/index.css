@@ -4,4 +4,6 @@ layer(base);
 
 body {
   font-family: "Outfit";
+  background: #000;
+  color: white;
 }
