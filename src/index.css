@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import "tailwindcss";
 
 body {
-  font-family: "Anton";
+  font-family: "Oswald";
+  font-weight: 300;
 }

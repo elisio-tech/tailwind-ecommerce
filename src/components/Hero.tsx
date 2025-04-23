@@ -1,22 +1,28 @@
-import { ShoppingBag } from "iconsax-reactjs";
-
 export default function Hero() {
   return (
-    <div className="bg-zinc-100">
-      <div className="relative grid place-content-center h-screen mx-8 sm:mx-auto max-w-4xl">
-        <h1 className="text-[24rem]">Code</h1>
-        <div>
-          <div className="flex absolute bottom-8 left-0 items-center">
-            <div className="w-10 h-10 border border-zinc-700 flex justify-center items-center rounded-full">
-              {" "}
-              <ShoppingBag size={24} color="#000" />
-            </div>
-            <button className="bg-black px-8 py-3 rounded-4xl text-white">
-              Shop now
-            </button>
-          </div>
-        </div>
+    <section className="relative h-screen text-white pt-28">
+      <div className="absolute inset-0 z-0">
+        <img
+          src=""
+          alt="Fashion model"
+          className="object-cover w-full h-full"
+        />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
-    </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto  pt-64">
+        <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
+          Pushing boundaries,
+          <br />
+          one look at a time
+        </h1>
+        <p className="mt-4 text-lg text-gray-200">
+          It's not just fashion — it's a statement, a bold expression of style
+        </p>
+        <button className="mt-6 px-12 py-3 bg-white text-black rounded shadow hover:bg-gray-200 transition">
+          Shop Now
+        </button>
+      </div>
+    </section>
   );
 }
