@@ -1,30 +1,46 @@
-import { Apple, BagHappy, SearchNormal, Shop } from "iconsax-reactjs";
+import { SearchNormal1 } from "iconsax-reactjs";
 import { Link } from "react-router-dom";
 
 export default function Header() {
-  const navLinks = ["Man", "Woman", "Kids"];
+  const nav = ["Shop", "Jornal", "About"];
   return (
-    <header className="fixed top-0 left-0 right-0 z-10">
-      <h2 className="text-center uppercase text-sm bg-blue-600 py-2 text-white">
-        Free express shipping on orders over $290
-      </h2>
+    <header className="fixed top-0 left-0 right-0 border-b border-zinc-300 z-50 bg-white">
+      <nav className="uppercase relative mx-auto max-w-4xl flex justify-between items-center py-6">
+        <div className="flex items-center gap-x-8">
+          <button
+            aria-label="Open menu"
+            className="cursor-pointer transition-all flex justify-center items-center gap-1 flex-col bg-zinc-200 w-12 h-12 rounded-full"
+          >
+            {[1, 2].map((item) => (
+              <div key={item} className="w-6 h-[1px] bg-[#181C14]" />
+            ))}
+          </button>
 
-      <nav className="max-w-4xl text-white mx-4 sm:mx-auto py-4 flex items-center justify-between">
-        <div className="w-1/3">
-          <ul className="flex space-x-6">
-            {navLinks.map((item, i) => (
-              <li key={i}>{item}</li>
+          <ul className="flex gap-x-6">
+            {nav.map((item, i) => (
+              <li key={i}>
+                <Link to={`/${item.toLowerCase()}`} className="hover:underline">
+                  {item}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
 
-        <div className="w-1/3 text-center">
-          <span className="self-center">Contrasté</span>
-        </div>
+        <Link
+          to="/"
+          className="absolute left-1/2 -translate-x-1/2 text-2xl text-center font-bold"
+        >
+          Mirror
+        </Link>
 
-        <div className="w-1/3 flex justify-end items-center gap-8">
+        <div className="flex gap-x-6">
+          <Link to="/sign-in" className="hover:underline">
+            Account
+          </Link>
+          <button className="uppercase hover:underline">Bag(0)</button>
           <button>
-            <Shop size={24} color="#fff" />
+            <SearchNormal1 size={24} color="#181C14" />
           </button>
         </div>
       </nav>
