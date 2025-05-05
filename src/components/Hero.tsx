@@ -7,7 +7,7 @@ export default function Hero() {
       <img
         src="/images/hero-3.webp"
         alt="hero"
-        className="absolute inset-0 object-contain w-full h-full shadow-2xl"
+        className="mb-8 absolute inset-0 object-contain w-full h-full "
       />
 
       {/* Conteúdo centralizado */}
@@ -22,7 +22,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute flex justify-between items-end left-0  right-2 bottom-2">
+      <div className="absolute flex justify-between items-end left-0  right-2 bottom-6">
         <span className="text-sm ml-16 pb-4">Scroll down</span>
         <div className="flex gap-4 h-36 p-2 bg-[#697565] rounded-md shadow-2xl">
           <img src="/images/kobe.avif" className="object-cover rounded-sm" />
