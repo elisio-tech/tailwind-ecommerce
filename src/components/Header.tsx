@@ -5,7 +5,7 @@ export default function Header() {
   const nav = ["Shop", "Jornal", "About"];
   return (
     <header className="fixed top-0 left-0 right-0 border-b border-zinc-300 z-50 bg-white">
-      <nav className="uppercase relative mx-auto max-w-4xl lg:max-w-6xl lg:text-xl flex justify-between items-center py-6">
+      <nav className="uppercase relative mx-auto lg:max-w-4xl xl:max-w-6xl text-md xl:text-xl flex justify-between items-center py-6">
         <div className="flex items-center gap-x-8">
           <button
             aria-label="Open menu"
