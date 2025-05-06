@@ -10,8 +10,8 @@ export default function Trend() {
   );
 
   return (
-    <section className="pt-24 bg-zinc-200">
-      <div className="mx-auto max-w-4xl pb-8">
+    <section className="pt-24 bg-zinc-100">
+      <div className="mx-auto max-w-4xl lg:max-w-6xl pb-8">
         <h1 className="text-5xl font-semibold mb-8">Trending Now</h1>
         <Swiper
           spaceBetween={20}

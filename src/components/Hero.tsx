@@ -11,9 +11,9 @@ export default function Hero() {
       />
 
       {/* Conteúdo centralizado */}
-      <div className="mx-auto max-w-4xl flex items-center h-screen pt-24 relative z-10 text-[#181C14]">
+      <div className="mx-auto max-w-4xl lg:max-w-6xl flex items-center h-screen pt-24 relative z-10 text-[#181C14]">
         <div>
-          <h1 className="text-7xl mb-3">
+          <h1 className="text-7xl lg:text-8xl mb-3">
             Find Your <br /> Flow
           </h1>
           <p className="pb-6 mb-18 text-zinc-600">
@@ -23,10 +23,10 @@ export default function Hero() {
       </div>
 
       <div className="absolute flex justify-between items-end left-0  right-2 bottom-6">
-        <span className="text-sm ml-16 pb-4">Scroll down</span>
-        <div className="flex gap-4 h-36 p-2 bg-[#697565] rounded-md shadow-2xl">
+        <span className="text-sm ml-16 lg:ml-24 pb-4">Scroll down</span>
+        <div className="lg:mx-8 flex gap-2 h-36 lg:h-44 p-2 lg:p-3 bg-[#697565] rounded-md shadow-2xl">
           <img src="/images/kobe.avif" className="object-cover rounded-sm" />
-          <div className=" flex flex-col justify-between">
+          <div className=" flex flex-col justify-between lg:px-4">
             <h2 className="text-2xl text-[#ECDFCC]">
               Buy new T-shert for your <br /> gymn work
             </h2>
