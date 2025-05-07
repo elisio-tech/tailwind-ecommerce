@@ -7,6 +7,7 @@ import { useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
 import { products } from "../data/products";
 import { ArrowLeft2, ArrowRight2 } from "iconsax-reactjs";
+import { Categories } from "../data/category";
 
 SwiperCore.use([Navigation]);
 
@@ -42,18 +43,18 @@ export default function Category() {
             768: { slidesPerView: 3 },
           }}
         >
-          {products.map((product, productIndex) => (
-            <SwiperSlide key={productIndex}>
+          {Categories.map((category, i) => (
+            <SwiperSlide key={i}>
               <div className="cursor-pointer mb-4">
                 <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-64 object-cover mb-4"
+                  src={category.image}
+                  alt={category.name}
+                  className="w-full h-full object-cover mb-4"
                 />
                 <div>
-                  <h3 className="text-lg">{product.name}</h3>
+                  <h3 className="text-lg">{category.name}</h3>
                   <h4 className="text-zinc-600 mb-4">
-                    ${product.price.toFixed(2)}
+                    Shop
                   </h4>
                 </div>
               </div>

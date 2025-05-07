@@ -54,7 +54,7 @@ export default function Trend() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-64 object-cover mb-4"
+                  className="w-full h-full object-cover mb-4"
                 />
                 <div>
                   <h3 className="text-lg">{product.name}</h3>

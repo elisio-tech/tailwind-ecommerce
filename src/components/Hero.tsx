@@ -24,7 +24,7 @@ export default function Hero() {
 
       <div className="absolute flex justify-between items-end left-0  right-2 bottom-6">
         <span className="text-sm lg:ml-16 xl:ml-24 pb-4 lg:text-xl">Scroll down</span>
-        <div className="lg:mx-8 flex gap-2 lg:h-36 xl:h-44 lg:p-2 xl:p-3 bg-[#697565] rounded-md shadow-md">
+        <div className="lg:mx-8 flex gap-2 lg:h-36 xl:h-44 lg:p-2 xl:p-3 bg-[#FF9D23] rounded-md shadow-md">
           <img src="/images/kobe.avif" className="object-cover rounded-sm" />
           <div className=" flex flex-col justify-between lg:px-4">
             <h2 className="lg:text-2xl xl:text-3xl text-[#ECDFCC]">
