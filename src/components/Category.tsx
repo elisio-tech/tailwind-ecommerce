@@ -3,7 +3,7 @@ import SwiperCore from "swiper";
 import { Navigation } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
-import {  useRef } from "react";
+import { useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
 import { products } from "../data/products";
 import { ArrowLeft2, ArrowRight2 } from "iconsax-reactjs";
@@ -40,7 +40,6 @@ export default function Category() {
           breakpoints={{
             640: { slidesPerView: 2 },
             768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
           }}
         >
           {products.map((product, productIndex) => (
