@@ -31,7 +31,7 @@ export default function Header() {
           to="/"
           className="absolute left-1/2 -translate-x-1/2 text-2xl text-center font-bold"
         >
-          Mirror
+          <img src={"/images/logo1.svg"} alt="logo" />
         </Link>
 
         <div className="flex gap-x-6">
