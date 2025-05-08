@@ -12,7 +12,7 @@ export default function Footer() {
               <h1 className="text-3xl mb-4">{item.title}</h1>
               <div className="flex flex-col gap-2">
                 {item.links.map((link, i) => (
-                  <p key={i}>{link.text}</p>
+                  <p className="text-xl text-zinc-600" key={i}>{link.text}</p>
                 ))}
               </div>
             </div>
