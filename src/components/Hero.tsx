@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="mx-auto max-w-4xl lg:max-w-4xl xl:max-w-6xl flex items-center h-screen pt-24 relative z-10 text-[#181C14]">
         <div>
           <h1 className="lg:text-7xl xl:text-8xl mb-3">
-            Find Your <br /> Flow
+          Push <br />Your Limits
           </h1>
         
         </div>
@@ -25,8 +25,8 @@ export default function Hero() {
         <div className="lg:mx-8 flex gap-2 lg:h-36 xl:h-44 lg:p-2 xl:p-3 bg-[#FF9D23] rounded-md shadow-md">
           <img src="/images/kobe.avif" className="object-cover rounded-sm" />
           <div className=" flex flex-col justify-between lg:px-4">
-            <h2 className="lg:text-2xl xl:text-3xl text-[#ECDFCC]">
-              Buy new T-shert for your <br /> gymn work
+            <h2 className="lg:text-2xl xl:text-3xl text-white">
+            Get Your New T-Shirt for the <br /> Perfect Gym Session!
             </h2>
             <div className="flex justify-between items-center">
               <h3 className="text-[#3C3D37] lg:text-xl xl:text-2xl pr-8">Explore the collection</h3>

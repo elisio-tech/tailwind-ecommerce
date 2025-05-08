@@ -16,7 +16,7 @@ export default function Category() {
 
   return (
     <section className="pt-24">
-      <div className="mx-auto lg:max-w-4xl xl:max-w-6xl pb-8">
+      <div className="mx-auto lg:max-w-4xl xl:max-w-6xl pb-24">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-5xl font-semibold mb-8">Category</h1>
           <div className="flex gap-2">
