@@ -16,9 +16,7 @@ export default function Hero() {
           <h1 className="lg:text-7xl xl:text-8xl mb-3">
             Find Your <br /> Flow
           </h1>
-          <p className="pb-6 mb-18 text-zinc-600">
-            Blade Course Polo with your own outfit
-          </p>
+        
         </div>
       </div>
 
