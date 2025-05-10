@@ -2,7 +2,7 @@ import { SearchNormal1 } from "iconsax-reactjs";
 import { Link } from "react-router-dom";
 
 export default function Header() {
-  const nav = ["Jackets", "Shorts", "Socks"];
+  const nav = ["Produts", "Shorts", "Socks"];
   return (
     <header className="fixed top-0 left-0 right-0 border-b border-zinc-300 z-50 bg-white">
       <nav className="uppercase relative mx-auto lg:max-w-4xl xl:max-w-6xl text-md xl:text-xl flex justify-between items-center py-6">
