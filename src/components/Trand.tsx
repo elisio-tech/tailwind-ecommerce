@@ -22,8 +22,8 @@ export default function Trend() {
     <section className="pt-24 bg-zinc-50">
       <div className="mx-auto lg:max-w-4xl xl:max-w-6xl pb-24">
         <div className="flex justify-between items-center mb-4">
-          <h1 className="text-5xl font-semibold mb-8">Trending Now</h1>
-          <div className="flex gap-2">
+          <h1 className="text-7xl font-semibold mb-8">Trending Now</h1>
+          <div className="flex items-center justify-center gap-2">
             <button
               className="hover:bg-zinc-800 transition-all cursor-pointer w-14 h-14 flex justify-center items-center rounded-full bg-zinc-300"
               onClick={() => swiperRef.current?.slidePrev()}

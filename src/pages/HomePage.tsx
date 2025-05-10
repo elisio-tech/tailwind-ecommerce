@@ -1,5 +1,4 @@
 import Category from "../components/Category";
-import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Shop from "../components/Shop";
 import Trand from "../components/Trand";
@@ -13,7 +12,6 @@ export default function HomePage() {
       <Work />
       <Category />
       <Shop />
-      <Footer />
     </div>
   );
 }
