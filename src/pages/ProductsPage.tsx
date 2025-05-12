@@ -1,17 +1,20 @@
 import { useState } from "react";
-import { database } from "../data/products";
+import { useCart } from "../context/ShopContext";
+import { Bag2 } from "iconsax-reactjs";
 
 export default function ProductsPage() {
+  const { products, addToCart } = useCart();
+
   const [activeColor, setActiveColor] = useState(
-    database.map((p) => p.colors[0])
+    products.map((p) => p.colors[0])
   );
 
   const [filter, setFilter] = useState("all");
 
   const filteredProducts =
     filter === "all"
-      ? database
-      : database.filter((product) => product.category.includes(filter));
+      ? products
+      : products.filter((product) => product.category.includes(filter));
 
   return (
     <section className=" mx-auto pt-44 lg:max-w-4xl xl:max-w-6xl relative">
@@ -20,7 +23,7 @@ export default function ProductsPage() {
           <div className="sticky left-0 top-44">
             <h2 className="text-xl text-zinc-400 mb-8 ">Filter by Category</h2>
             <div className="flex flex-col gap-2 text-left ">
-              {["all", ...new Set(database.map((p) => p.category))].map(
+              {["all", ...new Set(products.map((p) => p.category))].map(
                 (category, index) => (
                   <h2
                     key={index}
@@ -40,12 +43,14 @@ export default function ProductsPage() {
         <div className="grid grid-cols-3 gap-4">
           {filteredProducts.map((product, productIndex) => (
             <div key={productIndex}>
-              <div className="cursor-pointer mb-4">
+              <div className="mb-4 relative">
+               <button onClick={()=> addToCart(product)} className="cursor-pointer">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover mb-4"
                 />
+                </button>
                 <div>
                   <h3 className="text-lg">{product.name}</h3>
                   <h4 className="text-zinc-600 mb-4">
@@ -77,6 +82,9 @@ export default function ProductsPage() {
                         </div>
                       );
                     })}
+                    <div className="w-8 h-8 bg-white rounded-md flex justify-center items-center shadow-2xl cursor-pointer absolute top-3 left-3 ">
+                      <Bag2 size="20" color="#000" variant="Bold" />
+                    </div>
                   </div>
                 </div>
               </div>

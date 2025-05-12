@@ -1,8 +1,11 @@
 import { SearchNormal1 } from "iconsax-reactjs";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/ShopContext";
 
 export default function Header() {
   const nav = ["Products", "Shorts", "Socks"];
+  const { cart } = useCart();
+
   return (
     <header className="fixed top-0 left-0 right-0 border-b border-zinc-300 z-50 bg-white">
       <nav className="uppercase relative mx-auto lg:max-w-4xl xl:max-w-6xl text-md xl:text-xl flex justify-between items-center py-6">
@@ -38,7 +41,7 @@ export default function Header() {
           <Link to="/sign-in" className="hover:underline">
             Account
           </Link>
-          <button className="uppercase hover:underline">Bag(0)</button>
+          <button className="uppercase hover:underline">Bag({ cart.length })</button>
           <button>
             <SearchNormal1 size={24} color="#181C14" />
           </button>
