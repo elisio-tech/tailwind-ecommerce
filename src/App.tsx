@@ -5,6 +5,7 @@ import SignUp from "./components/auth/Sign-up";
 import ProductsPage from "./pages/ProductsPage";
 import { CartProvider } from "./context/ShopContext";
 
+
 export default function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/sign-up" element={<SignUp />} />
         </Routes>
       </CartProvider>
+   
     </Router>
   );
 }

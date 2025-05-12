@@ -4,7 +4,7 @@ import { useCart } from "../context/ShopContext";
 
 export default function Header() {
   const nav = ["Products", "Shorts", "Socks"];
-  const { cart } = useCart();
+  const { cart, toggleCart } = useCart();
 
   return (
     <header className="fixed top-0 left-0 right-0 border-b border-zinc-300 z-50 bg-white">
@@ -22,7 +22,7 @@ export default function Header() {
           <ul className="flex gap-x-6">
             {nav.map((item, i) => (
               <li key={i}>
-                <Link to={`/${item.toLowerCase()}`} className="hover:underline ">
+                <Link to={`/${item.toLowerCase()}`} >
                   {item}
                 </Link>
               </li>
@@ -38,10 +38,10 @@ export default function Header() {
         </Link>
 
         <div className="flex gap-x-6">
-          <Link to="/sign-in" className="hover:underline">
+          <Link to="/sign-in" >
             Account
           </Link>
-          <button className="uppercase hover:underline">Bag({ cart.length })</button>
+          <button onClick={()=> toggleCart()} className="cursor-pointer uppercase ">Bag({ cart.length })</button>
           <button>
             <SearchNormal1 size={24} color="#181C14" />
           </button>

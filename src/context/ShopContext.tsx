@@ -1,14 +1,16 @@
-import React, { createContext, useState, useContext } from 'react';
-import { database, DatabaseItem as ProductType } from '../data/products'; // Import the typed DatabaseItem and rename it
+import React, { createContext, useState, useContext } from "react";
+import { database, DatabaseItem as ProductType } from "../data/products"; // Import the typed DatabaseItem and rename it
 
 interface CartItem {
-  product: ProductType & { id: string }; 
+  product: ProductType & { id: string };
   quantity: number;
 }
 
 interface CartContextType {
   products: (ProductType & { id: string })[]; // Ensure products have an id
   cart: CartItem[];
+  isCartOpen: boolean;
+  toggleCart: () => void; // Function to open/close the cart
   addToCart: (product: ProductType) => void;
   removeFromCart: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
@@ -18,6 +20,8 @@ interface CartContextType {
 const defaultCartContext: CartContextType = {
   products: [],
   cart: [],
+  isCartOpen: false, // Initialize as closed
+  toggleCart: () => {},
   addToCart: () => {},
   removeFromCart: () => {},
   updateQuantity: () => {},
@@ -28,19 +32,28 @@ const CartContext = createContext<CartContextType>(defaultCartContext);
 
 export const useCart = () => useContext(CartContext);
 
-export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [products] = useState<(ProductType & { id: string })[]>(
     database.map((product, index) => ({ ...product, id: String(index) })) // Add a temporary ID
   );
 
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
   const addToCart = (product: ProductType) => {
     // Need to find the product with an ID from the products state
     const productWithId = products.find((p) => p.name === product.name);
 
     if (productWithId) {
-      const itemInCart = cart.find((item) => item.product.id === productWithId.id);
+      const itemInCart = cart.find(
+        (item) => item.product.id === productWithId.id
+      );
 
       if (itemInCart) {
         setCart(
@@ -84,6 +97,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       value={{
         products,
         cart,
+        isCartOpen, // Include isCartOpen in the value
+        toggleCart, // Include toggleCart function
         addToCart,
         removeFromCart,
         updateQuantity,
