@@ -18,7 +18,7 @@ export default function ProductsPage() {
 
   return (
     <section className=" mx-auto pt-44 lg:max-w-4xl xl:max-w-6xl relative">
-      <div className="grid grid-cols-[1fr_3fr] gap-8 ">
+      <div className="grid grid-cols-[200px_3fr] gap-8 ">
         <div>
           <div className="sticky left-0 top-44">
             <h2 className="text-xl text-zinc-400 mb-8 ">Filter by Category</h2>
